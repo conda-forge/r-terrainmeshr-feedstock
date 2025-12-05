@@ -1,4 +1,4 @@
-{% set version = '0.1.0' %}
+{% set version = "1.0.1" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/terrainmeshr_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/terrainmeshr/terrainmeshr_{{ version }}.tar.gz
-  sha256: 7949914e7340de481f33b87ad8952dc4b251cb7d3407adf56eff47813f374bf5
+  sha256: 0d905ed7400daa17e78dbce488b336c84cb0de629db94fa86fcc0013560ed26b
 
 build:
-  number: 4
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -46,10 +46,7 @@ test:
 about:
   home: https://www.github.com/tylermorganwall/terrainmeshr
   license: MIT
-  summary: Provides triangulations of regular height fields, based on the methods described in
-    "Fast Polygonal Approximation of Terrains and Height Fields" Michael Garland and
-    Paul S. Heckbert (1995) <https://www.mgarland.org/files/papers/scape.pdf> using
-    code from the 'hmm' library written by Michael Fogleman <https://www.github.com/fogleman/hmm>.
+  summary: Provides triangulations of regular height fields, based on the methods described in "Fast Polygonal Approximation of Terrains and Height Fields" Michael Garland and Paul S. Heckbert (1995) <https://www.mgarland.org/files/papers/scape.pdf> using code from the 'hmm' library written by Michael Fogleman <https://www.github.com/fogleman/hmm>.
   license_family: MIT
   license_file:
     - '{{ environ["PREFIX"] }}/lib/R/share/licenses/MIT'
